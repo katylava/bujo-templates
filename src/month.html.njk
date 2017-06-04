@@ -1,0 +1,26 @@
+---
+title: {{ month_name }}
+page-type: month
+layout: layout.html
+---
+
+<section id="left-page">
+    <ul>
+        {% for d in date_labels %}
+            {% if loop.index <= 16 %}
+                <li>{{ d }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="right-page">
+    <ul>
+        {% for d in date_labels %}
+            {% if loop.index > 16 %}
+                <li>{{ d }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</section>
+
