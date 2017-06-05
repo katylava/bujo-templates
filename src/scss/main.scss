@@ -104,3 +104,45 @@ body {
         }
     }
 }
+
+#trackers {
+    ul.main {
+        display: grid;
+        grid-template-columns: .5in .3in .3in .3in .3in .3in .3in .3in .75in .75in;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 7in;
+        width: 4.75in;
+
+        li.main {
+            border-right: 1px solid #ccc;
+            font-size: 8pt;
+            grid-row: 1;
+            padding-top: .05in;
+            text-align: center;
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    border-bottom: 1px dotted #def;
+                    font-size: 10pt;
+                    height: .2in;
+                    line-height: 16pt;
+
+                    &.weekend {
+                        background: #eee;
+                    }
+
+                    .dow {
+                        color: green;
+                    }
+                }
+            }
+
+        }
+    }
+}
