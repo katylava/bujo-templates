@@ -1,3 +1,50 @@
-#test-page {
-    color: red;
+body {
+    display: grid;
+    font-family: Hack;
+    height: 8.5in;
+    width: 11in;
+}
+
+.page {
+    outline: 1px dotted #eee;
+    height: 7in;
+    width: 4.75in;
+
+    &.left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    &.right {
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+#month {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 7in;
+        width: 4.75in;
+
+        li {
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            height: .435in;
+            line-height: .435in;
+            padding-left: .05in;
+            width: 100%;
+
+            .label {
+                border-right: 1px solid #666;
+                width: .5in;
+
+                .dow {
+                    color: green;
+                }
+            }
+        }
+    }
 }

@@ -17,6 +17,7 @@
     "metalsmith-in-place": "^2.0.1",
     "metalsmith-layouts": "^1.8.1",
     "metalsmith-sass": "^1.4.0",
+    "metalsmith-watch": "^1.0.3",
     "moment": "^2.18.1",
     "twix": "^1.2.0"
   }
