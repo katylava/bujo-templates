@@ -1,3 +1,6 @@
+Current status: Brand new, proof of concept, not usable
+
+
 I have a really hard time setting up new month pages in my "bullet journal" (in
 quotes because I don't really do it "right") by hand. I created this project so
 I could just print out the pages and tape them into my journal, instead of not
