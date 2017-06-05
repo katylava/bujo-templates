@@ -6,7 +6,7 @@ body {
 }
 
 .page {
-    outline: 1px dotted #eee;
+    outline: 1px dotted #ccc;
     height: 7in;
     width: 4.75in;
 
@@ -43,6 +43,62 @@ body {
 
                 .dow {
                     color: green;
+                }
+            }
+        }
+    }
+}
+
+#future {
+    ul.main {
+        display: grid;
+        grid-template-columns: .3in .3in .3in .3in .3in .3in auto;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        height: 7in;
+        width: 4.75in;
+
+        li.main {
+            border-right: 1px solid #ccc;
+            font-size: 8pt;
+            grid-row: 1;
+            padding-top: .05in;
+            text-align: center;
+
+            &.col1 {
+                grid-column: 1;
+            }
+            &.col2 {
+                grid-column: 2;
+            }
+            &.col3 {
+                grid-column: 3;
+            }
+            &.col4 {
+                grid-column: 4;
+            }
+            &.col5 {
+                grid-column: 5;
+            }
+            &.col6 {
+                grid-column: 6;
+            }
+
+            &.last {
+                border-left: 2px solid #ccc;
+                border-right: none;
+                grid-column: 7;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    border-bottom: 1px dotted #def;
+                    height: .25in;
                 }
             }
         }

@@ -1,0 +1,27 @@
+---
+pagetype: future
+layout: layout.html
+---
+
+<section class="left page">
+    <ul class="main">
+        {% for month in future_months %}
+            <li class="main col{{loop.index}}">
+                {{month}}
+                <ul>
+                    {% for i in range(0, 25) %}
+                        <li></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+        <li class="main last">
+            &nbsp;
+            <ul>
+                {% for i in range(0, 25) %}
+                    <li></li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</section>

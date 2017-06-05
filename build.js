@@ -14,13 +14,16 @@ var _start = moment().startOf('month')
 var startDate = (new Date).getDate() <= 24 ? _start : _start.add(1, 'month')
 
 var monthDates = startDate.twix(moment(startDate).endOf('month'), { allDay: true }).toArray('days')
-
 var monthDateLabels = monthDates.map(d => {
     return { dow: d.format('dd')[0], dom: d.format('D') }
 })
 
+var futureMonths = Array(6).fill().map((_, i) => moment(startDate).add(i + 1, 'months').format('MMM'))
+console.log(futureMonths)
+
 Metalsmith(__dirname)
     .metadata({
+        future_months: futureMonths,
         month_date_labels: monthDateLabels,
         month_name: moment().format('MMMM YYYY')
     })
