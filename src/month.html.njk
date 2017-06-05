@@ -4,11 +4,12 @@ layout: layout.html
 ---
 
 {% set side = cycler("left", "right") %}
+
 {% for part in month_date_labels | slice(2) %}
 <section class="{{side.next()}} page">
     <ul>
         {% for d in part %}
-            <li>
+            <li class="{{"weekend" if d.dow === "S" else ""}}">
                 <div class="label">
                     <span class="dow">{{d.dow}}</span>
                     <span class="dom">{{d.dom}}</span>

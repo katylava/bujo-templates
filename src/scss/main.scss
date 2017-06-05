@@ -37,6 +37,10 @@ body {
             padding-left: .05in;
             width: 100%;
 
+            &.weekend {
+                background: #eee;
+            }
+
             .label {
                 border-right: 1px solid #666;
                 width: .5in;
