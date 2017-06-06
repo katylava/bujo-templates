@@ -3,7 +3,7 @@ pagetype: trackers
 layout: layout.html
 ---
 
-{% set cols = ['&nbsp;', 'X', 'F', 'C', 'L', 'G', 'E', 'A', 'wt', 'kc'] %}
+{% set cols = ["&nbsp;", "EX", "FR", "CR", "LU", "G", "ET", "A", "wt", "kc"] %}
 <section class="left page">
     <ul class="main">
         {% for c in cols %}
@@ -12,16 +12,12 @@ layout: layout.html
                 <ul>
                     <li>&nbsp;</li>
                     {% for d in month_date_labels %}
-                        {% if c === '&nbsp;' %}
-                            <li>
+                        {% if c === "&nbsp;" %}
+                            <li class="{{"weekend" if d.dow === "S" else ""}}">
                                 <span class="dow">{{d.dow}}</span><span class="dom">{{d.dom}}</span>
                             </li>
                         {% else %}
-                            {% if d.dow === 'S' %}
-                                <li class="weekend"></li>
-                            {% else %}
-                                <li></li>
-                            {% endif %}
+                            <li class="{{"weekend" if d.dow === "S" else ""}}"></li>
                         {% endif %}
                     {% endfor %}
                 </ul>
